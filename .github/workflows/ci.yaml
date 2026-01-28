@@ -1,0 +1,16 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+      - feature/**
+  pull_request:
+
+jobs:
+  pipeline:
+    uses: Adrian-CICD-Project/ci-cd-templates/.github/workflows/java-ci-full.yml@main
+    with:
+      image-name: adrian-java-app
+      env-repo: Adrian-CICD-Project/infrastructure-env-dev
+    secrets: inherit
