@@ -1,0 +1,38 @@
+image:
+  repository: acrfordevopspoc01-adrian.azurecr.io/devops-project
+  tag: "latest"
+  pullPolicy: IfNotPresent
+
+replicaCount: 1
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 256Mi
+  limits:
+    cpu: 500m
+    memory: 512Mi
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 8080
+
+ingress:
+  enabled: false
+  className: nginx
+  host: ""
+  path: /
+  pathType: Prefix
+  tls:
+    enabled: false
+    secretName: ""
+
+env:
+  - name: SPRING_PROFILES_ACTIVE
+    value: "default"
+
+podAnnotations:
+  prometheus.io/scrape: "true"
+  prometheus.io/path: "/actuator/prometheus"
+  prometheus.io/port: "8080"
