@@ -7,6 +7,11 @@ on:
       - feature/**
   pull_request:
 
+permissions:
+  contents: write
+  actions: read
+  pull-requests: write
+
 jobs:
   pipeline:
     uses: Adrian-CICD-Project/ci-cd-templates/.github/workflows/java-ci-full.yml@main
