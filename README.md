@@ -88,4 +88,4 @@ When deploying a new application, ensure your `pom.xml` includes:
 - ArgoCD monitors changes in `infrastructure-env-*` repositories and synchronizes application state automatically
 
 
-## END .
+## END ..
