@@ -1,2 +1,3 @@
-/mnt/c/Users/Wojtek/IdeaProjects/SWDF/wojtek-java-maven/src/test/java/com/example/wojtek_java_maven/WojtekJavaMavenApplicationTests.java
-/mnt/c/Users/Wojtek/IdeaProjects/SWDF/wojtek-java-maven/src/test/java/com/example/wojtek_java_maven/HelloControllerTest.java
+/mnt/c/Users/adria/devops-project/src/test/java/com/example/devops_project/DevopsProjectApplicationTests.java
+/mnt/c/Users/adria/devops-project/src/test/java/com/example/devops_project/HelloControllerTest.java
+/mnt/c/Users/adria/devops-project/src/test/java/com/example/devops_project/LoggingServiceTest.java

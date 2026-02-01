@@ -1,2 +1,3 @@
-/mnt/c/Users/Wojtek/IdeaProjects/SWDF/wojtek-java-maven/src/main/java/com/example/wojtek_java_maven/controller/HelloController.java
-/mnt/c/Users/Wojtek/IdeaProjects/SWDF/wojtek-java-maven/src/main/java/com/example/wojtek_java_maven/WojtekJavaMavenApplication.java
+/mnt/c/Users/adria/devops-project/src/main/java/com/example/devops_project/DevopsProjectApplication.java
+/mnt/c/Users/adria/devops-project/src/main/java/com/example/devops_project/controller/HelloController.java
+/mnt/c/Users/adria/devops-project/src/main/java/com/example/devops_project/service/LoggingService.java

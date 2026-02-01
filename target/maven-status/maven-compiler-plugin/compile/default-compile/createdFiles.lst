@@ -1,2 +1,3 @@
-com/example/wojtek_java_maven/WojtekJavaMavenApplication.class
-com/example/wojtek_java_maven/controller/HelloController.class
+com/example/devops_project/controller/HelloController.class
+com/example/devops_project/service/LoggingService.class
+com/example/devops_project/DevopsProjectApplication.class
