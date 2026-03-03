@@ -18,4 +18,11 @@ jobs:
     with:
       image-name: adrian-java-app
       env-repo: Adrian-CICD-Project/infrastructure-env-dev
-    secrets: inherit
+    secrets:
+      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+      ACR_NAME: ${{ secrets.ACR_NAME }}
+      AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
+      DTRACK_API_URL: ${{ secrets.DTRACK_API_URL }}
+      DEPENDENCY_TRACK_API_KEY: ${{ secrets.DEPENDENCY_TRACK_API_KEY }}
+      ENV_REPOS_TOKEN: ${{ secrets.ENV_REPOS_TOKEN }}
