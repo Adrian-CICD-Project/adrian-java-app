@@ -8,7 +8,7 @@ COPY src ./src
 # Normalny build aplikacji
 RUN mvn -B clean package -DskipTests=false
 
-FROM eclipse-temurin:21-jre
+FROM eclipse-temurin:25-jre
 WORKDIR /app
 
 COPY --from=build /app/target/*.jar app.jar
