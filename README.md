@@ -26,11 +26,16 @@ The pipeline runs automatically after every push to the `main` branch.
 | Stage | Description |
 |-------|-------------|
 | **Build & Test** | Runs `mvn clean verify`, test artifacts available in GitHub Actions |
-| **SonarQube** | Code quality scan and analysis |
-| **Security & SBOM** | Trivy scan, CycloneDX SBOM generation, Dependency-Track upload |
-| **Docker Build** | Image build with semantic version tag (1.0.x), push to ACR |
-| **GitHub Release** | Automatic release with attached SBOM and Trivy report |
+| **SonarQube** | Code quality scan and analysis (Quality Gate must pass) |
+| **Security & SBOM** | Trivy scan (gate: fixable CRITICAL fails the build), CycloneDX SBOM, Dependency-Track upload + findings export |
+| **Docker Build** | Image build with semantic version tag (1.0.x); push to ACR **only from `main`** |
+| **GitHub Release** | Automatic release with SBOM, Dependency-Track findings, Trivy report and JUnit results |
 | **Promotion to DEV** | PR creation to `infrastructure-env-dev`, ArgoCD rollout |
+
+Additionally:
+
+- **Secret Scan** (gitleaks) runs on every push/PR — see `.github/workflows/secret-scan.yaml`
+- **Dependabot** opens weekly PRs for Maven, GitHub Actions and Docker base image updates — see `.github/dependabot.yml`
 
 ---
 
